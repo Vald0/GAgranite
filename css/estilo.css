@@ -1,0 +1,538 @@
+html {
+    font-size: 62.5%;
+    background-image: url(../img/wallpaper.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Commissioner', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+/** code by webdevtrick ( https://webdevtrick.com ) **/
+
+
+/**scrollbar**/
+
+
+/* width */
+
+ ::-webkit-scrollbar {
+    width: 20px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(201, 180, 168);
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(167, 148, 138);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(190, 189, 189, 0.514);
+    font-size: 20px;
+    color: black;
+}
+
+.logo img {
+    width: 15rem;
+}
+
+.menu-bar {
+    display: grid;
+    justify-items: center;
+}
+
+@media (min-width: 768px) {
+    .menu-bar {
+        display: flex;
+    }
+    .opciones {
+        display: grid;
+        align-self: center;
+        font-size: 2rem;
+        margin-left: 8rem;
+    }
+}
+
+.opciones {
+    display: none;
+    margin-left: 0rem;
+}
+
+@media (min-width: 768px) {
+    .opciones {
+        display: flex;
+        align-self: center;
+        font-size: 2rem;
+        margin-left: 8rem;
+    }
+}
+
+.option-menu {
+    margin-left: 0rem;
+}
+
+@media (min-width: 768px) {
+    .option-menu {
+        display: none;
+        align-self: center;
+        font-size: 2rem;
+        margin-left: 8rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    a {
+        text-decoration: none;
+        font-size: 2rem;
+        color: black;
+        padding: 0rem 2rem 1.3rem 2rem;
+    }
+}
+
+
+/**Iconos**/
+
+
+/**iconos del header**/
+
+.icono_1 {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.5s;
+    top: -20rem;
+}
+
+.icono_2 {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.5s;
+    top: -20rem;
+}
+
+.icono_3 {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.5s;
+    top: -20rem;
+}
+
+.icono_4 {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.5s;
+    top: -20rem;
+}
+
+
+/**Iconos del footer**/
+
+.icono_a {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    bottom: -20rem;
+    transition: all 0.5s;
+}
+
+.icono_b {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.5s;
+    bottom: -20rem;
+}
+
+.icono_c {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.5s;
+    bottom: -20rem;
+}
+
+.icono_d {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.5s;
+    bottom: -20rem;
+}
+
+.icono_modal {
+    width: 3rem;
+    height: 3rem;
+}
+
+.menu_option {
+    display: grid;
+    justify-items: center;
+}
+
+a:hover~.icono_1 {
+    top: 3rem;
+}
+
+a:hover~.icono_2 {
+    top: 3rem;
+}
+
+a:hover~.icono_3 {
+    top: 3rem;
+}
+
+a:hover~.icono_4 {
+    top: 3rem;
+}
+
+a:hover~.icono_a {
+    bottom: 3rem;
+}
+
+a:hover~.icono_b {
+    bottom: 3rem;
+}
+
+a:hover~.icono_c {
+    bottom: 3rem;
+}
+
+a:hover~.icono_d {
+    bottom: 3rem;
+}
+
+
+/**Modal**/
+
+
+/* Add animation (Chrome, Safari, Opera) */
+
+@-webkit-keyframes example {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+
+/* Add animation (Standard syntax) */
+
+@keyframes example {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+
+/* The modal's background */
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Display the modal when targeted */
+
+.modal:target {
+    display: table;
+    position: absolute;
+}
+
+
+/* The modal box */
+
+.modal-dialog {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* The modal's content */
+
+.modal-dialog .modal-content {
+    margin: auto;
+    background-color: #f3f3f3;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    border: 1px #777 solid;
+    text-align: justify;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* Add animation */
+    -webkit-animation-name: example;
+    /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 0.5s;
+    /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 0.5s;
+}
+
+
+/* The button used to close the modal */
+
+.closebtn {
+    text-decoration: none;
+    float: left;
+    font-size: 29px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.closebtn:hover,
+.closebtn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+
+/**Contenido de la pagina**/
+
+h1,
+h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 4rem;
+    }
+    h3 {
+        font-size: 3rem;
+    }
+}
+
+p {
+    font-size: 2rem;
+}
+
+
+/**propiedades del blog**/
+
+.principal {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.imagen_principal {
+    width: 35rem;
+}
+
+.imagen_secundaria {
+    width: 30rem;
+}
+
+@media (min-width: 768px) {
+    .imagen_principal {
+        width: 130rem;
+    }
+    .imagen_secundaria {
+        width: 80rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .dos-columnas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.una-columna {
+    display: grid;
+    justify-content: center;
+    background-color: rgba(250, 242, 209, 0.767);
+    margin: 0 5rem 5rem;
+    padding-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+.entrada-blog {
+    margin: 0rem 5rem 0rem 5rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+
+/**Secciones de blog**/
+
+.marmol {
+    background-color: rgba(255, 255, 255, 0.541);
+    border-radius: 1rem;
+}
+
+.granito {
+    background-color: rgba(107, 107, 107, 0.541);
+    border-radius: 1rem;
+}
+
+.mision {
+    margin: 2rem;
+}
+
+
+/**Complementos de blog**/
+
+.collage {
+    width: 20rem;
+}
+
+@media (min-width: 768px) {
+    .collage {
+        width: 40rem;
+    }
+}
+
+.boton {
+    padding: 1rem;
+    border-radius: 20%;
+    transition: all 0.3s;
+}
+
+.btn-negro {
+    color: white;
+    background-image: url(../img/marmol-negro.jpg);
+    margin-top: 1rem;
+}
+
+.btn-cuarzo {
+    color: white;
+    background-image: url(../img/marmol-negro.jpg);
+    margin: 0px 10rem 2rem 10rem;
+}
+
+@media (min-width: 768px) {
+    .btn-cuarzo {
+        margin: 0px 55rem 2rem 55rem;
+    }
+}
+
+.btn-blanco {
+    color: black;
+    background-image: url(../img/granito-blanco.jpg);
+    margin-top: 1rem;
+}
+
+.boton:hover {
+    padding: 1.5rem;
+    border-radius: 10%;
+    font-size: 3rem;
+}
+
+
+/**redes sociales**/
+
+.redes {
+    display: grid;
+}
+
+.redes img {
+    justify-self: center;
+    width: 10rem;
+    height: 10rem;
+}
+
+.facebook img {
+    transition: all 0.2s;
+}
+
+.facebook img:hover {
+    width: 12rem;
+    height: 12rem;
+    border-style: solid;
+    border-color: rgb(1, 1, 49);
+    border-width: 1px;
+    border-radius: 50%;
+}
+
+
+/**Footer**/
+
+footer {
+    background-color: rgba(190, 189, 189, 0.651);
+    padding-bottom: 2.5rem;
+}
+
+
+/**Contacto**/
+
+label {
+    display: flex;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+textarea {
+    margin-top: 2rem;
+    width: 30rem;
+}
