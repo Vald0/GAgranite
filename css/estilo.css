@@ -411,7 +411,6 @@ p {
 .una-columna {
     display: grid;
     justify-content: center;
-    background-color: rgba(250, 242, 209, 0.767);
     margin: 0 5rem 5rem;
     padding-bottom: 2rem;
     border-radius: 1rem;
